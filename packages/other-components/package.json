@@ -1,6 +1,6 @@
 {
   "private": true,
-  "name": "cool-components",
+  "name": "other-components",
   "version": "0.0.1",
   "description": "",
   "module": "./dist/esm/index.js",
@@ -10,15 +10,15 @@
       "types": "./dist/types/index.d.ts",
       "import": "./dist/esm/index.js"
     },
-    "./CoolButton": {
-      "types": "./dist/types/CoolButton.d.ts",
-      "import": "./dist/esm/CoolButton.js"
+    "./SomeButton": {
+      "types": "./dist/types/SomeButton.d.ts",
+      "import": "./dist/esm/SomeButton.js"
     }
   },
   "typesVersions": {
     "*": {
-      "CoolButton": [
-        "./dist/types/CoolButton.d.ts"
+      "SomeButton": [
+        "./dist/types/SomeButton.d.ts"
       ]
     }
   },
@@ -28,10 +28,8 @@
     "pre-commit-eslint": "eslint --ext .js,.jsx,.mjs,.ts,.tsx -c ../../.eslintrc.js --fix",
     "lint": "eslint . --ext .js,.jsx,.mjs,.ts,.tsx -c ../../.eslintrc.js",
     "clean": "rimraf dist",
-    "build-esm": "tsc -p tsconfig.esm.json",
-    "build-dts": "tsc -p tsconfig.dts.json",
-    "build": "pnpm clean && pnpm build-esm && pnpm build-dts",
-    "dev": "chokidar \"src/**/*.{ts,tsx}\" -c \"pnpm build\""
+    "build": "pnpm clean && node ./scripts/runBuild.mjs",
+    "dev": "node ./scripts/runDev.mjs"
   },
   "author": "Matteo Ronchi <matteo.ronchi@gmail.com> (https://github.com/cef62)",
   "license": "MIT",
@@ -40,11 +38,15 @@
     "@emotion/react": "11.7.1",
     "@emotion/styled": "11.6.0",
     "@mui/material": "5.2.8",
+    "@mui/system": "5.3.0",
     "@types/react": "17.0.38",
-    "chokidar-cli": "3.0.0",
+    "chokidar": "3.5.2",
+    "esbuild": "0.14.10",
+    "esbuild-plugins": "workspace:0.0.1",
     "react": "17.0.2",
     "react-dom": "17.0.2",
     "rimraf": "3.0.2",
+    "tiny-glob": "0.2.9",
     "typescript": "4.5.4"
   },
   "dependencies": {
@@ -54,6 +56,7 @@
     "@emotion/react": "11.7.1",
     "@emotion/styled": "11.6.0",
     "@mui/material": "5.2.8",
+    "@mui/system": "5.3.0",
     "react": "17.0.2",
     "react-dom": "17.0.2"
   }

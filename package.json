@@ -26,5 +26,12 @@
   "engines": {
     "node": ">=16.3.0",
     "pnpm": ">=6.23.2"
+  },
+  "pnpm": {
+    "overrides": {
+      "eslint-plugins": "workspace:*",
+      "cool-components": "workspace:*",
+      "other-components": "workspace:*"
+    }
   }
 }

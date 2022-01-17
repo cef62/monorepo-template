@@ -1,12 +1,14 @@
 import { useCallback } from 'react'
 import Box from '@mui/material/Box'
 import Paper from '@mui/material/Paper'
+import Stack from '@mui/material/Stack'
 import CssBaseline from '@mui/material/CssBaseline'
 import { CoolButton } from 'cool-components/CoolButton'
+import { SomeButton } from 'other-components/SomeButton'
 
 export function App() {
   const handleOnClick = useCallback(() => {
-    console.log('CoolButton Clicked')
+    console.log('Button Clicked')
   }, [])
 
   return (
@@ -35,12 +37,13 @@ export function App() {
             justifyContent: 'center',
           }}
         >
-          Hello
-          <CoolButton
-            label="Do you want to click me?"
-            onClick={handleOnClick}
-            variant="contained"
-          />
+          <Stack spacing={2}>
+            <CoolButton label="Cool Button" onClick={handleOnClick} variant="contained" />
+
+            <SomeButton onClick={handleOnClick} variant="contained">
+              Some Button
+            </SomeButton>
+          </Stack>
         </Paper>
       </Box>
     </>

@@ -1,0 +1,27 @@
+{
+  "private": true,
+  "name": "esbuild-plugins",
+  "version": "0.0.1",
+  "main": "./dist/cjs/index.js",
+  "module": "./dist/esm/index.js",
+  "types": "./dist/types/index.d.ts",
+  "scripts": {
+    "pre-commit": "lint-staged --relative",
+    "pre-commit-prettier": "prettier --write",
+    "pre-commit-eslint": "eslint --ext .js,.jsx,.mjs,.ts,.tsx -c ../../.eslintrc.js --fix",
+    "lint": "eslint . --ext .js,.jsx,.mjs,.ts,.tsx -c ../../.eslintrc.js",
+    "clean": "rimraf dist",
+    "build": "pnpm clean && node ./scripts/build.mjs"
+  },
+  "author": "",
+  "license": "UNLICENSED",
+  "devDependencies": {
+    "@types/node": "17.0.8",
+    "esbuild": "0.14.10",
+    "rimraf": "3.0.2",
+    "typescript": "4.5.4"
+  },
+  "dependencies": {
+    "tslib": "2.3.1"
+  }
+}
