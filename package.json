@@ -1,0 +1,30 @@
+{
+  "private": true,
+  "name": "monorepo-template",
+  "version": "0.0.1",
+  "license": "MIT",
+  "author": "Matteo Ronchi <matteo.ronchi@gmail.com> (https://github.com/cef62)",
+  "scripts": {
+    "prepare": "husky install",
+    "pre-commit": "lint-staged --relative",
+    "pre-commit-prettier": "prettier --write",
+    "pre-commit-eslint": "eslint --ext .js,.jsx,.mjs,.ts,.tsx -c .eslintrc.js --fix"
+  },
+  "devDependencies": {
+    "@typescript-eslint/eslint-plugin": "5.10.0",
+    "@typescript-eslint/parser": "5.10.0",
+    "eslint": "8.7.0",
+    "eslint-config-prettier": "8.3.0",
+    "eslint-plugin-prettier": "4.0.0",
+    "eslint-plugin-react": "7.28.0",
+    "eslint-plugin-react-hooks": "4.3.0",
+    "husky": "7.0.4",
+    "lint-staged": "12.1.7",
+    "prettier": "2.5.1",
+    "typescript": "4.5.4"
+  },
+  "engines": {
+    "node": ">=16.3.0",
+    "pnpm": ">=6.23.2"
+  }
+}
