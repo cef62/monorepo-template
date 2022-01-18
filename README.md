@@ -1,14 +1,41 @@
 ---
 marp: true
 theme: gaia
+class:
+  - lead
+  - invert
 author: Matteo ronchi matteo.ronchi@gmail.com
 ---
 
 # Mono-repo Starter
 
+https://github.com/cef62/monorepo-template
+
 ---
 
-The repository is a quick way of bootstrapping a new mono-repo for a Web Application.
+# What is a mono-repo?
+
+# What problem space does it try to solve?
+
+---
+
+
+![bg fit](images/mono-repo.png)
+
+---
+
+## Mono-repo tools
+
+- [yarn workspaces](https://classic.yarnpkg.com/lang/en/docs/workspaces/)
+- [lerna ](https://github.com/lerna/lerna)
+- [pnpm](https://pnpm.io/)
+- [turborepo](https://turborepo.org/)
+- [nx](https://nx.dev/)
+- [rush](https://rushjs.io/)
+
+---
+
+## This repository is a quick way of bootstrapping a new mono-repo for a Web Application.
 
 ---
 
@@ -68,17 +95,6 @@ You can easily add other automation to validate your code before pushing it to G
 
 ---
 
-## Mono-repo helpers
-
-- [yarn workspaces](https://classic.yarnpkg.com/lang/en/docs/workspaces/)
-- [lerna ](https://github.com/lerna/lerna)
-- [pnpm](https://pnpm.io/)
-- [turborepo](https://turborepo.org/)
-- [nx](https://nx.dev/)
-- [rush](https://rushjs.io/)
-
----
-
 ## PNPM
 
 Out of many tools helping you build a mono-repo, `pnpm` is my choice of preference.
@@ -129,4 +145,8 @@ The most significant issue for me is that `typescript` doesn't support the featu
 
 Luckily, there's an easy workaround :)
 
+---
 
+[@cef62 - Twitter](https://twitter.com/cef62)
+
+[@cef62 - Github](https://github.com/cef62)
